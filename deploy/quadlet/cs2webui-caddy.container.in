@@ -1,0 +1,19 @@
+[Unit]
+Description=CS2 WebUI public Caddy reverse proxy
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+Image=docker.io/library/caddy:2-alpine
+ContainerName=cs2webui-caddy
+Network=host
+Volume=/etc/cs2webui/Caddyfile:/etc/caddy/Caddyfile:ro,Z
+Volume=__SYSTEM_DIR__/caddy/data:/data:Z
+Volume=__SYSTEM_DIR__/caddy/config:/config:Z
+
+[Service]
+Restart=always
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

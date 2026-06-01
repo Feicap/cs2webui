@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS2 WebUI Setup</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="background-grid"></div>
+    <main class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">C2</div>
+          <div><strong>CS2 WebUI</strong><span data-i18n="setup">Setup console</span></div>
+        </div>
+        <ol class="steps" id="steps"></ol>
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <div><strong data-i18n="panelOnline">Panel is online</strong><span data-i18n="serverIndependent">CS2 servers remain independent</span></div>
+        </div>
+      </aside>
+      <section class="content">
+        <header class="topbar">
+          <div><span class="eyebrow" data-i18n="firstRun">First run</span><h1 id="title"></h1><p id="subtitle"></p></div>
+          <span class="step-count" id="step-count"></span>
+        </header>
+        <section class="panel" id="panel"></section>
+        <footer class="actions">
+          <button class="button ghost" id="back" type="button" data-i18n="back">Back</button>
+          <button class="button primary" id="next" type="button" data-i18n="continue">Continue</button>
+        </footer>
+      </section>
+    </main>
+    <script src="/static/setup.js"></script>
+  </body>
+</html>

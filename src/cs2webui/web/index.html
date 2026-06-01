@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS2 WebUI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="background-grid"></div>
+    <main class="loading-screen">
+      <div class="brand-mark">C2</div>
+      <h1>CS2 WebUI</h1>
+      <p>Loading control panel...</p>
+    </main>
+    <script>
+      fetch("/api/setup/state")
+        .then((response) => response.json())
+        .then((state) => {
+          window.location.replace(state.completed ? "/panel" : "/setup");
+        })
+        .catch(() => window.location.replace("/setup"));
+    </script>
+  </body>
+</html>

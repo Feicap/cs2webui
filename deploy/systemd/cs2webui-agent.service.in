@@ -1,0 +1,16 @@
+[Unit]
+Description=CS2 WebUI restricted host agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=CS2WEBUI_AGENT_TOKEN=__DATA_DIR__/agent.token
+Environment=CS2WEBUI_INSTANCES_DIR=__DATA_DIR__/instances
+ExecStart=__AGENT_VENV__/bin/uvicorn cs2webui.host.agent:app --uds __DATA_DIR__/agent.sock
+Restart=always
+RestartSec=2
+UMask=0077
+
+[Install]
+WantedBy=default.target
