@@ -129,6 +129,45 @@ tested by normal development.
 - Reverse proxy and rootless Podman behavior across distributions.
 - Clean uninstall without touching user-owned CS2 data.
 
+## TODO
+
+### Linux And Bazzite Validation
+
+- Run the public `cs2webui.sh` bootstrap on a clean Linux host.
+- Run `sudo bash /opt/cs2webui/scripts/verify-linux.sh`.
+- Repeat the bootstrap and verifier on Bazzite using the `/var/opt/cs2webui`
+  application path.
+- Confirm rootless Podman image builds, user Quadlet services, the restricted
+  host-agent socket, SELinux labels, and domain-mode Caddy HTTPS.
+- Verify firewall diagnostics for `ufw`, `firewall-cmd`, and `nft` hosts.
+
+### Live CS2 Validation
+
+- Download, validate, update, start, stop, and restart a real CS2 installation
+  through SteamCMD.
+- Run at least two isolated CS2 instances and document their required UDP
+  ports.
+- Verify import, copy, move, clone, backup, restore, scheduled maintenance,
+  player-defer notices, and update-before-restart behavior.
+- Load MetaMod, CounterStrikeSharp, and the bridge plugin after a current CS2
+  update; verify `meta list`, heartbeat snapshots, player Steam profiles, and
+  bot detection.
+- Verify standard-to-Workshop and Workshop-to-standard transitions after
+  actual match-end events in multiple game modes.
+- Trigger an external or manual map change and confirm the dashboard reports
+  map drift.
+- Install a trusted local plugin from both a managed ZIP archive and an
+  extracted folder.
+- Test ordinary uninstall, panel-data purge, instance purge, and full purge;
+  confirm that ordinary uninstall preserves CS2 files.
+
+### Project Administration
+
+- Choose and add the repository license.
+- Record Linux/Bazzite results in `docs/LINUX_INTEGRATION.md`.
+- Publish the first stable release only after the live validation checklist
+  passes.
+
 ## Change Log
 
 ### 2026-05-30
