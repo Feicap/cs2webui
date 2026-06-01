@@ -389,3 +389,11 @@ tested by normal development.
   with LF normalization so Linux shell scripts remain executable after edits
   from Windows. Windows-native batch and PowerShell files retain CRLF if added
   later.
+- Created the local publication baseline commit:
+  `6919fb0 Initial CS2 WebUI implementation`. Markdown relative links,
+  deployment tests, staged whitespace checks, and shell-file LF attributes
+  were verified before committing.
+- GitHub remote publication is pending creation of the empty
+  `Feicap/cs2webui` repository. The connected GitHub App can inspect installed
+  repositories but cannot create a new one, `gh` is not installed locally,
+  and no non-interactive `GH_TOKEN` or `GITHUB_TOKEN` is present.
