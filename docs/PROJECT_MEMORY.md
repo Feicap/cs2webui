@@ -401,3 +401,7 @@ tested by normal development.
   Ruff, compileall, browser JavaScript syntax, and shell syntax; sanitized bug
   and feature issue templates; and a pull-request checklist that preserves
   Linux, modularity, secret-masking, and managed-path requirements.
+- GitHub repository `Feicap/cs2webui` was created as a public repository with
+  a two-line placeholder README. Merged its initialization commit using the
+  existing publication-ready project tree as the authoritative content, then
+  prepared `main` for push without discarding the remote history.
