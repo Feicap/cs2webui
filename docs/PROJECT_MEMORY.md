@@ -405,3 +405,7 @@ tested by normal development.
   a two-line placeholder README. Merged its initialization commit using the
   existing publication-ready project tree as the authoritative content, then
   prepared `main` for push without discarding the remote history.
+- Published `main` to `https://github.com/Feicap/cs2webui`. The first GitHub
+  Actions push run (`26754705325`) completed successfully and verified pytest,
+  Ruff, compileall, browser JavaScript syntax, and Linux shell syntax on
+  `ubuntu-latest`.
