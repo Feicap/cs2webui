@@ -397,3 +397,7 @@ tested by normal development.
   `Feicap/cs2webui` repository. The connected GitHub App can inspect installed
   repositories but cannot create a new one, `gh` is not installed locally,
   and no non-interactive `GH_TOKEN` or `GITHUB_TOKEN` is present.
+- Added GitHub publication scaffolding: a portable CI workflow for pytest,
+  Ruff, compileall, browser JavaScript syntax, and shell syntax; sanitized bug
+  and feature issue templates; and a pull-request checklist that preserves
+  Linux, modularity, secret-masking, and managed-path requirements.

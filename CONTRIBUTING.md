@@ -33,6 +33,9 @@ bash -n cs2webui.sh scripts/*.sh
 sudo bash scripts/verify-linux.sh
 ```
 
+Pull requests run the same portable checks through
+[GitHub Actions](.github/workflows/ci.yml).
+
 ## Design Rules
 
 - Keep Podman as the only supported container runtime.
